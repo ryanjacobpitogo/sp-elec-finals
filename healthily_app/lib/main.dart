@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'components/login_button.dart';
 import 'constants.dart';
+import 'components/input_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,13 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  late TextEditingController inputController;
 
   @override
   Widget build(BuildContext context) {
@@ -53,21 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            LoginButton(label: "LOG IN", clr: clrLightRed, onPress: (){}, icon: const SizedBox(height: 0)),
+            const SizedBox(height: 15),
+            LoginButton(label: " FACEBOOK", clr: clrCyanBlue, onPress: (){}, icon: loginFacebookIcon),
+            const SizedBox(height: 15),
+            LoginButton(label: "  CONTINUE WITH GOOGLE", clr: clrWhite, onPress: (){}, icon: loginGoogleIcon)
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
