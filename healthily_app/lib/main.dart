@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthily_app/screens/diet_details_page/diet_details_screen.dart';
 //import 'package:healthily_app/components/title_text.dart';
-import 'components/logo.dart';
 import 'constants.dart';
 // import 'components/login_button.dart';
 // import 'components/input_field.dart';
 // import 'components/title_text.dart';
-import 'screens/login_page/login_container.dart';
-import 'screens/login_page/login_screen.dart';
+//import 'screens/login_page/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginScreen();
+    return const DietDetailsScreen();
   }
 }
 

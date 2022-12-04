@@ -13,6 +13,7 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
+      textAlign: TextAlign.center,
       style: GoogleFonts.comfortaa(
         color: clr,
         fontSize: fntSize,
