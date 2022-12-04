@@ -12,6 +12,37 @@ const clrGrey = Colors.grey;
 //font sizes
 const titleFontSize = 36.0;
 
+//Scaffold Background
+const scaffoldBackground = BoxDecoration(
+  image: DecorationImage(
+    image: AssetImage("assets/scaffoldBg.jpg"),
+
+    fit: BoxFit.fill,
+  ),
+);
+
+//Box Shadows
+var boxShadowDefault = BoxShadow(
+  color: Colors.grey.withOpacity(0.5),
+  spreadRadius: 2,
+  blurRadius: 4,
+  offset: const Offset(2, 2)
+);
+
+var boxShadowLow = BoxShadow(
+  color: Colors.black.withOpacity(.2),
+  spreadRadius: 2,
+  blurRadius: 3,
+  offset: const Offset(2, 2.5)
+);
+
+//Box Decoration
+var boxDecorDefault = BoxDecoration(
+  color: clrWhite,
+  border: Border.all(color: clrGrey, width: inputFieldBorWidth),
+  borderRadius: BorderRadius.circular(inputFieldBorRad),
+);
+
 //Login Button constants
 const loginPadding = 10.0;
 const loginMinHeight = 50.0;
@@ -25,10 +56,11 @@ const inputFieldBorRad = 15.0;
 const inputFieldFontSize = 15.0;
 const inputFieldPadding = 12.0;
 const inputFieldBorWidth = 2.5;
+
 //Input Field variables
 TextEditingController uNameController = TextEditingController();
 TextEditingController passController = TextEditingController();
 
-//
+//Login 
 //  
 //Data list
