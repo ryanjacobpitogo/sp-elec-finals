@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: const ColorScheme.light().copyWith(primary: clrDarkRed),
+        //Default color scheme for most widgets
+        colorScheme: const ColorScheme.light().copyWith(primary: clrMainRed),
+        //Default font family
+        fontFamily: GoogleFonts.comfortaa().fontFamily,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
