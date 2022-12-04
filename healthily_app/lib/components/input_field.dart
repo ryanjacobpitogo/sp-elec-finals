@@ -17,16 +17,12 @@ class InputField extends StatelessWidget {
         minWidth: loginMinWidth,
         maxWidth: loginMaxWidth,
       ),
-      decoration: BoxDecoration(
-      color: clrWhite,
-      border: Border.all(color: clrGrey, width: inputFieldBorWidth),
-      borderRadius: BorderRadius.circular(inputFieldBorRad),
-    ),
+      decoration: boxDecorDefault,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: inputFieldPadding),
         child: TextField(
           controller: label == "username" ? uNameController : passController,
-          obscureText: label == "Password",
+          obscureText: label == "password",
           decoration: InputDecoration(  
             border: InputBorder.none,
             hintText: label == "username" ? "Enter Username" : "Password",

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+//import 'package:healthily_app/components/title_text.dart';
+import 'components/logo.dart';
 import 'constants.dart';
-import 'components/login_button.dart';
-import 'components/input_field.dart';
-import 'components/title_text.dart';
+// import 'components/login_button.dart';
+// import 'components/input_field.dart';
+// import 'components/title_text.dart';
+import 'screens/login_page/login_container.dart';
+import 'screens/login_page/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,28 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const TitleText(label: "Log In", clr: clrDarkRed, fntSize: titleFontSize),
-            const SizedBox(height: 30),
-            const InputField(label: 'username'),
-            const SizedBox(height: 15),
-            const InputField(label: 'password'),
-            const SizedBox(height: 15),
-            LoginButton(label: "LOG IN", clr: clrLightRed, onPress: (){}, icon: const SizedBox(height: 0)),
-            const SizedBox(height: 15),
-            LoginButton(label: " FACEBOOK", clr: clrCyanBlue, onPress: (){}, icon: loginFacebookIcon),
-            const SizedBox(height: 15),
-            LoginButton(label: "  CONTINUE WITH GOOGLE", clr: clrWhite, onPress: (){}, icon: loginGoogleIcon)
-          ],
-        ),
-      ),
-    );
+    return const LoginScreen();
   }
 }
+
