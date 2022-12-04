@@ -9,7 +9,8 @@ const clrCyanBlue = Color.fromARGB(255, 17, 151, 245);
 const clrWhite = Colors.white;
 const clrGrey = Colors.grey;
 
-
+//font sizes
+const titleFontSize = 36.0;
 
 //Login Button constants
 const loginPadding = 10.0;

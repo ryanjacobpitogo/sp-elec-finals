@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'components/login_button.dart';
 import 'constants.dart';
+import 'components/login_button.dart';
 import 'components/input_field.dart';
+import 'components/title_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,6 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const TitleText(label: "Log In", clr: clrDarkRed, fntSize: titleFontSize),
+            const SizedBox(height: 30),
             const InputField(label: 'username'),
             const SizedBox(height: 15),
             const InputField(label: 'password'),
