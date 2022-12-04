@@ -49,6 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const InputField(label: 'username'),
+            const SizedBox(height: 15),
+            const InputField(label: 'password'),
+            const SizedBox(height: 15),
             LoginButton(label: "LOG IN", clr: clrLightRed, onPress: (){}, icon: const SizedBox(height: 0)),
             const SizedBox(height: 15),
             LoginButton(label: " FACEBOOK", clr: clrCyanBlue, onPress: (){}, icon: loginFacebookIcon),
