@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:healthily_app/components/singular_botm_nav.dart';
 import 'package:healthily_app/components/title_text.dart';
 import 'package:healthily_app/main.dart';
+import 'package:healthily_app/screens/diet_details_page/dietTags.dart';
 //import 'package:healthily_app/components/title_text.dart';
 import '../../components/logo.dart';
 import '../../constants.dart';
@@ -35,9 +36,27 @@ class DietDetailsScreen extends StatelessWidget {
                       decoration: boxDecorContainer,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          SizedBox(height: 40,),
-                          TitleText(label: "Your diet experience", clr: clrBlack, fntSize: 26),
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children:  <Widget>[
+                          const SizedBox(height: 40,),
+                          const TitleText(label: "Your diet experience", clr: clrBlack, fntSize: 26),
+                          const SizedBox(height: 40,),
+                            SizedBox(
+                              height: 700,
+                              width: double.infinity,
+                                child: GridView.count(
+                                  physics: const ScrollPhysics(),
+
+                                  crossAxisCount: 2,
+                                  crossAxisSpacing: 15,
+                                  mainAxisSpacing: 30,
+                                  childAspectRatio: (5.0 / 6.2),
+                                  children: 
+                                    tagsList.map((element) => DietTags(label: element['tag'], icon: element['image'], onPress: (){},)).toList(),
+                                ),
+                              ),
+                            
+                          
                         ],
                       ),
                     ),

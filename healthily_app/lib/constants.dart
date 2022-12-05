@@ -69,5 +69,12 @@ TextEditingController passController = TextEditingController();
 //Login Data
 
 //Diet Details Data
-
+ List<Map<String, dynamic>> tagsList = [
+    {"id": 1, "tag": "Pork", "image": Image.asset("assets/tag_meat.png")},
+    {"id": 2, "tag": "Fish", "image": Image.asset("assets/tag_fish.png")},
+    {"id": 3, "tag": "Vegetable", "image": Image.asset("assets/tag_vegetable.png")},
+    {"id": 4, "tag": "Chicken", "image": Image.asset("assets/tag_turkey.png")},
+    {"id": 5, "tag": "No Milk", "image": Image.asset("assets/tag_milk.png")},
+    {"id": 6, "tag": "No Sugar", "image": Image.asset("assets/tag_sugar.png")},
+];
 //Data list

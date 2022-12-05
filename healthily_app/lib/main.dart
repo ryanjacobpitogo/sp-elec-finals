@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthily_app/screens/diet_details_page/diet_details_screen.dart';
+import 'package:healthily_app/screens/login_page/login_screen.dart';
 //import 'package:healthily_app/components/title_text.dart';
 import 'constants.dart';
 // import 'components/login_button.dart';
@@ -19,33 +20,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      //routes
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the LoginPage widget.
+        '/': (context) => const LoginScreen(),
+        // When navigating to the "/second" route, build the HomePage widget.
+        '/DietDetails': (context) => const DietDetailsScreen(),
+      },
       theme: ThemeData(
         //Default color scheme for most widgets
         colorScheme: const ColorScheme.light().copyWith(primary: clrMainRed),
         //Default font family
         fontFamily: GoogleFonts.comfortaa().fontFamily,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  late TextEditingController inputController;
-
-  @override
-  Widget build(BuildContext context) {
-    return const DietDetailsScreen();
   }
 }
 

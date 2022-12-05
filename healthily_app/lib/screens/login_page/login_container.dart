@@ -6,8 +6,7 @@ import '../../components/title_text.dart';
 
 class LoginContainer extends StatelessWidget {
   const LoginContainer({
-    Key? key,
-  }) : super(key: key);
+    Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class LoginContainer extends StatelessWidget {
           const SizedBox(height: 15),
           const InputField(label: 'password'),
           const SizedBox(height: 15),
-          LoginButton(label: "LOG IN", clr: clrLightRed, onPress: (){}, icon: const SizedBox(height: 0)),
+          LoginButton(label: "LOG IN", clr: clrLightRed, onPress: ()=>{Navigator.pushNamed(context, '/DietDetails')}, icon: const SizedBox(height: 0)),
           const SizedBox(height: 15),
           LoginButton(label: " FACEBOOK", clr: clrCyanBlue, onPress: (){}, icon: loginFacebookIcon),
           const SizedBox(height: 15),
