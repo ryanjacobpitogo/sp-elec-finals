@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:healthily_app/constants.dart';
 
 class TitleText extends StatelessWidget {
   const TitleText({super.key, required this.label, required this.clr, required this.fntSize});
