@@ -28,21 +28,38 @@ class _ResCard extends State<ResCard> {
       child: GestureDetector(
           child: Padding(
             padding: const EdgeInsets.only(left: 8.0),
-            child: Container(
-              width: double.infinity,
-              height: 150,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: widget.image, fit: BoxFit.cover), // button text
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 125.0),
-                child: Text(
-                  widget.label,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                  textAlign: TextAlign.end,
+            child: Stack(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: widget.image,
+                        fit: BoxFit.cover), // button text
+                  ),
+                 
                 ),
-              ),
+                Positioned(
+                  left: -40,
+                  top: -85,
+                  child: Image.asset(
+                    "assets/bg-overlay.png",
+                    width: 435,
+                    height: 355,
+                  )),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                      padding: const EdgeInsets.only(top: 125.0, right: 10),
+                      child: Text(
+                        widget.label,
+                        style: const TextStyle(color: Colors.white, fontSize: 20),
+                        textAlign: TextAlign.end,
+                      ),
+                    ),
+                ),
+              ],
             ),
           ),
           onTap: () {

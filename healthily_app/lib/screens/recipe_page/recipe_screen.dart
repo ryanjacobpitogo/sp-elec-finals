@@ -137,7 +137,7 @@ class _Rec extends State<Rec> {
                     Row(
                       children: [
                         Container(
-                          width: 292,
+                          width: 322,
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,

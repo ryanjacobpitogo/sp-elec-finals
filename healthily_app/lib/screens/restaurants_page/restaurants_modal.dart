@@ -64,7 +64,7 @@ class Restaurantview extends State<Resview> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 20),
+                                    padding: const EdgeInsets.only(top: 20, right: 12),
                                     child: Container(
                                       padding: const EdgeInsets.only(
                                           top: 5,
@@ -86,7 +86,7 @@ class Restaurantview extends State<Resview> {
                                 ],
                               ),
                               Padding(
-                                padding: EdgeInsets.fromLTRB(8, 25, 0, 0),
+                                padding: EdgeInsets.fromLTRB(8, 25, 0, 10),
                                 child: Text(
                                   widget.label,
                                   style: TextStyle(
