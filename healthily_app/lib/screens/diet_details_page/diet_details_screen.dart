@@ -106,7 +106,7 @@ class _DietDetailsScreenState extends State<DietDetailsScreen> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 15,
                           mainAxisSpacing: 30,
-                          childAspectRatio: (5.0 / 6.2),
+                          childAspectRatio: (5.0 / 6.5),
                           children: tagsList
                               .map((element) => DietTags(
                                     label: element['tag'],
