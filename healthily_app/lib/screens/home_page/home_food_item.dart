@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../diet_details_page/diet_details_screen.dart';
+// import '../restaurants_page/restaurants_screen.dart';
+import '../recipe_page/recipe_screen.dart';
 
 class FoodItem extends StatefulWidget {
   const FoodItem(
@@ -54,8 +55,8 @@ class _FoodItem extends State<FoodItem> {
                 width: widget.width,
                 height: widget.height,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: widget.image, fit: BoxFit.cover),
+                  image:
+                      DecorationImage(image: widget.image, fit: BoxFit.cover),
                 ),
               ),
               Positioned(
@@ -84,8 +85,8 @@ class _FoodItem extends State<FoodItem> {
               .map((e) => widget.label == e['type'] ? filter(e['name']) : null)
               .toList();
 
-          // Navigator.of(context).push(MaterialPageRoute(
-          //     builder: (context) => Res(filteredRes, filteredRec)));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => Rec(filteredRes, filteredRec)));
         });
   }
 }
